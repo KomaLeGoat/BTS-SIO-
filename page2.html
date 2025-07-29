@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Présentation BTS SIO</title>
+     <link rel="stylesheet" href="formation.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        h1, h2 {
+            color: #ffffff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            border: 1px solid #ffffff;
+            text-align: left;
+        }
+
+        th {
+            background-color: #469dc2;
+            color: white;
+        }
+
+        .welcome {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #b35656;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome" id="welcomeMessage"></div>
+
+    <h1>BTS SIO – Services Informatiques aux Organisations</h1>
+    <p>
+        Le BTS SIO (Services Informatiques aux Organisations) est un diplôme d'État de niveau Bac+2, formant des spécialistes des technologies de l'information dans deux spécialités :
+    </p>
+
+    <h2>Les spécialités :</h2>
+    <ul>
+        <li><strong>SISR</strong> : La spécialité SISR du BTS SIO (Services Informatiques aux Organisations) forme des techniciens capables de :
+
+Installer, configurer et sécuriser des serveurs, réseaux et systèmes informatiques.
+
+Gérer l’infrastructure informatique d’une organisation (entreprise, administration...).
+
+Assurer la maintenance, la sécurité et la supervision du réseau.
+
+Intervenir sur des environnements virtualisés, des serveurs Linux ou Windows, des pare-feux, etc.
+
+C’est une spécialité tournée vers les métiers de l’administration système, réseau et cybersécurité.</li>
+
+        <li><strong>SLAM</strong> : Solutions Logicielles et Applications Métiers,
+        La spécialité SLAM du BTS SIO forme des professionnels capables de :
+
+Concevoir, développer et maintenir des applications informatiques (sites web, logiciels, applications mobiles…).
+
+Travailler sur des bases de données, des interfaces utilisateurs, des API, etc.
+
+Adapter les solutions logicielles aux besoins des utilisateurs d’une entreprise ou d’un client.
+
+Participer à toutes les phases d’un projet logiciel : analyse, développement, test, déploiement et documentation.
+
+C’est une spécialité orientée programmation et gestion d'applications métier.</li>
+    </ul>
+
+    <h2>Tableau des matières</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Matière</th>
+                <th>Volume horaire (hebdomadaire)</th>
+                <th>Enseignement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Culture générale et expression</td>
+                <td>3h</td>
+                <td>Tronc commun</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>3h</td>
+                <td>Tronc commun</td>
+            </tr>
+            <tr>
+                <td>Mathématiques</td>
+                <td>3h</td>
+                <td>Tronc commun</td>
+            </tr>
+            <tr>
+                <td>CEJM</td>
+                <td>4h</td>
+                <td>Tronc commun</td>
+            </tr>
+            <tr>
+                <td>CEJMA</td>
+                <td>1h</td>
+                <td>Tronc commun</td>
+            </tr>
+            <tr>
+                <td>Enseignement professionnel SISR</td>
+                <td>10h</td>
+                <td>Option SISR</td>
+            </tr>
+            <tr>
+                <td>Enseignement professionnel SLAM</td>
+                <td>10h</td>
+                <td>Option SLAM</td>
+            </tr>
+            <tr>
+                <td>Cybersécurité</td>
+                <td>8h</td>
+                <td>Tronc générale</td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="back-button" onclick="history.back()">← Retour à l’accueil</button>
+
+
+    <script>
+        // Affiche le nom de l'utilisateur
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get("user");
+        if (user) {
+            document.getElementById("welcomeMessage").innerText = `Bienvenue ${user} ! Voici les détails de la formation BTS SIO.`;
+        }
+    </script>
+</body>
+</html>
