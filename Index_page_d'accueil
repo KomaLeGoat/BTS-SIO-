@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - BTS SIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">BTS SIO</div>
+            <div class="creators">
+    <img src="createur1.jpg" alt="Créateur 1" class="creator-img" onclick="zoomImage(this)">
+    <img src="createur2.jpg" alt="Créateur 2" class="creator-img" onclick="zoomImage(this); playMusic();">
+
+</div>
+
+<!-- Fenêtre d'image plein écran -->
+<div id="overlay" class="overlay" onclick="closeOverlay()">
+    <img id="overlay-img" src="" alt="Image Zoomée">
+</div>
+
+            <ul class="nav-links">
+                <a href="stage.html" class="nav-button">Stage</a>
+                <li><a href="#">Événement</a></li>
+                <li><a href="#">Alternance</a></li>
+                <li><a href="#">Inscription</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-text">
+            <h1>Bienvenue sur le site du BTS SIO</h1>
+            <p>Le BTS Services Informatiques aux Organisations vous forme aux métiers de l'informatique d'aujourd'hui et de demain, curieux ? se site est fais pour vous alors</p>
+            <a href="#" class="cta-button" onclick="openPopup()">Découvrir la formation</a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BTS SIO - Tous droits réservés.</p>
+    </footer>
+    <script>
+    function zoomImage(imgElement) {
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlay-img');
+        overlayImg.src = imgElement.src;
+        overlay.style.display = 'flex';
+    }
+
+    function closeOverlay() {
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
+
+<!-- Pop-up formulaire -->
+<!-- Pop-up formulaire -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">✕</span>
+        <h2>Entrez votre nom</h2>
+        <input type="text" id="username" placeholder="Votre prénom ou nom..." required>
+        <button onclick="submitName()">Continuer</button>
+    </div>
+</div>
+
+
+<script>
+    function openPopup() {
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    function submitName() {
+        const name = document.getElementById('username').value.trim();
+        if (name) {
+            window.location.href = `page2.html?user=${encodeURIComponent(name)}`;
+        } else {
+            alert("Veuillez entrer votre nom !");
+        }
+    }
+</script>
+
+<script>
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
+<script>
+    function playMusic() {
+        const player = document.getElementById('player');
+        player.play();
+    }
+</script>
+
+
+<audio id="player" src="BS.mp3" loop></audio>
+
+
+</body>
+</html>
