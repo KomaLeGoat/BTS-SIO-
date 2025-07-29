@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', 'Courier New', monospace;
+    background: linear-gradient(to bottom right, #0f172a, #1e293b);
+    color: #e2e8f0;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* ---- Titres ---- */
+h1, h2, h3 {
+    color: #38bdf8;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+h1 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #38bdf8;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #7dd3fc;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #a5f3fc;
+}
+
+/* ---- Paragraphes et listes ---- */
+p {
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ---- Sections / blocs ---- */
+section {
+    background-color: rgba(30, 41, 59, 0.8);
+    border-left: 5px solid #38bdf8;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
+}
+
+/* ---- Boutons ---- */
+button, .btn {
+    background-color: #22d3ee;
+    color: #0f172a;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover, .btn:hover {
+    background-color: #0ea5e9;
+}
+
+/* ---- Encadrés / cartes ---- */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ---- Fonts import ---- */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+.stage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* aligne l'image et le texte en haut */
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.stage-text {
+    flex: 1 1 60%;
+}
+
+.stage-image {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.stage-image img {
+    max-width: 100%;
+    max-height: 300px; /* limite la hauteur de l’image */
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+.back-button {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0ea5e9;
+}
