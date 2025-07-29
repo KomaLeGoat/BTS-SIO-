@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+                url('formation_image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #f1f5f9;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+
+/* Titre principal */
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+/* Sous-titres */
+h2 {
+    font-size: 1.5rem;
+    color: #7dd3fc;
+    margin-top: 2rem;
+}
+
+/* Texte d'accueil */
+.welcome {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #e2e8f0f6;
+}
+
+/* Paragraphe */
+p, li {
+    margin-bottom: 1rem;
+}
+
+/* Liste */
+ul {
+    margin-left: 1.5rem;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #eff2f7;
+    text-align: left;
+}
+
+th {
+    background-color: #fefefe;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+td {
+    color: #e8e8e8;
+}
+
+tr:nth-child(even) {
+    background-color: #376bb4;
+}
+
+tr:nth-child(odd) {
+    background-color: #4a6389;
+}
+.back-button {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0ea5e9;
+}
+
